@@ -20,15 +20,15 @@ const App = () => {
         screenOptions={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
             let COLOR = focused ? '#333D4A' : '#D1D6DC';
-            let SIZE = 28;
+            let SIZE = 30;
 
-            if (route.name === 'Home') {
+            if (route.name === '홈') {
               return <Foundation name={'home'} size={SIZE} color={COLOR} />;
-            } else if (route.name === 'Spent') {
+            } else if (route.name === '내 소비') {
               return (
                 <FontAwesome5 name={'calendar'} size={SIZE} color={COLOR} />
               );
-            } else if (route.name === 'Benefit') {
+            } else if (route.name === '혜택') {
               return (
                 <MaterialCommunityIcons
                   name={'star-four-points'}
@@ -36,16 +36,42 @@ const App = () => {
                   color={COLOR}
                 />
               );
-            } else if (route.name === 'Stock') {
+            } else if (route.name === '주식') {
               return (
                 <Foundation name={'mountains'} size={SIZE} color={COLOR} />
               );
-            } else if (route.name === 'All') {
+            } else if (route.name === '전체') {
               return <FontAwesome5 name={'bars'} size={SIZE} color={COLOR} />;
+            } else {
+              return null;
             }
           },
         })}
-        tabBarOptions={{}}>
+        tabBarOptions={{
+          activeTintColor: '#333D4A',
+          tabStyle: {},
+          labelStyle: {
+            fontSize: 14,
+          },
+          iconStyle: {
+            marginBottom: -10,
+          },
+          style: {
+            height: 80,
+            paddingBottom: 10,
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
+            shadowColor: '#000',
+            shadowOffset: {
+              width: 0,
+              height: 0,
+            },
+            shadowOpacity: 0.2,
+            shadowRadius: 30,
+            elevation: 10,
+            position: 'absolute',
+          },
+        }}>
         <Tab.Screen name="홈" component={Home} />
         <Tab.Screen name="내 소비" component={Spent} />
         <Tab.Screen name="혜택" component={Benefit} />
