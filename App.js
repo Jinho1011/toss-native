@@ -1,7 +1,9 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import Foundation from 'react-native-vector-icons/Foundation';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Home from './screens/Home/HomeContainer';
 import Spent from './screens/Spent/SpentContainer';
@@ -17,30 +19,38 @@ const App = () => {
       <Tab.Navigator
         screenOptions={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
-            let iconName;
+            let COLOR = focused ? '#333D4A' : '#D1D6DC';
+            let SIZE = 28;
 
             if (route.name === 'Home') {
-              iconName = focused ? 'home-sharp' : 'home-outline';
+              return <Foundation name={'home'} size={SIZE} color={COLOR} />;
             } else if (route.name === 'Spent') {
-              iconName = focused ? 'search' : 'search-outline';
+              return (
+                <FontAwesome5 name={'calendar'} size={SIZE} color={COLOR} />
+              );
             } else if (route.name === 'Benefit') {
-              iconName = focused ? 'add-circle' : 'add-circle-outline';
+              return (
+                <MaterialCommunityIcons
+                  name={'star-four-points'}
+                  size={SIZE}
+                  color={COLOR}
+                />
+              );
             } else if (route.name === 'Stock') {
-              iconName = focused ? 'heart' : 'heart-outline';
+              return (
+                <Foundation name={'mountains'} size={SIZE} color={COLOR} />
+              );
             } else if (route.name === 'All') {
-              iconName = focused ? 'person-circle' : 'person-circle-outline';
+              return <FontAwesome5 name={'bars'} size={SIZE} color={COLOR} />;
             }
-
-            // You can return any component that you like here!
-            return <Ionicons name={iconName} size={28} color={'#242424'} />;
           },
         })}
         tabBarOptions={{}}>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Spent" component={Spent} />
-        <Tab.Screen name="Benefit" component={Benefit} />
-        <Tab.Screen name="Stock" component={Stock} />
-        <Tab.Screen name="All" component={All} />
+        <Tab.Screen name="홈" component={Home} />
+        <Tab.Screen name="내 소비" component={Spent} />
+        <Tab.Screen name="혜택" component={Benefit} />
+        <Tab.Screen name="주식" component={Stock} />
+        <Tab.Screen name="전체" component={All} />
       </Tab.Navigator>
     </NavigationContainer>
   );
