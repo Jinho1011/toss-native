@@ -43,12 +43,8 @@ export default () => {
           headerTransparent: true,
           headerBackground: () => (
             <BlurView
-              style={{
-                height: 56,
-              }}
               blurType="light"
-              // blurAmount={100}
-              blurRadius={25}
+              blurAmount={100}
               reducedTransparencyFallbackColor="white"
             />
           ),
