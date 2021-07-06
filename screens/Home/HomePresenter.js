@@ -12,7 +12,7 @@ const HomeUser = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 20px 20px 20px;
+  padding: 60px 20px 20px 20px;
 `;
 
 const HomeUserLeft = styled.View`
@@ -72,6 +72,22 @@ const HomeMargin = styled.View`
   height: 1000px;
 `;
 
+const HomeAccounts = styled.View``;
+
+const AccoutsHeader = styled.View``;
+
+const AccountsTitle = styled.Text``;
+
+const AccountsTotal = styled.View``;
+
+const AccountsTotalNumber = styled.Text``;
+
+const AccountsTotalDetail = styled.Test``;
+
+const AccountsList = styled.View``;
+
+const Account = styled.View``;
+
 const Home = () => {
   return (
     <HomeScroll>
@@ -91,20 +107,18 @@ const Home = () => {
           </HomeUserRight>
         </HomeUser>
         <HomeDivider></HomeDivider>
-        <HomeUser>
-          <HomeUserLeft>
-            <UserImage></UserImage>
-            <UserNameContainer>
-              <UserName>전진호</UserName>
-              <UserCredit>신용 점수 보기</UserCredit>
-            </UserNameContainer>
-          </HomeUserLeft>
-          <HomeUserRight>
-            <HomeRemit>
-              <HomeRemitText>송금</HomeRemitText>
-            </HomeRemit>
-          </HomeUserRight>
-        </HomeUser>
+        <HomeAccounts>
+          <AccoutsHeader>
+            <AccountsTitle>계좌</AccountsTitle>
+            <AccountsTotal>
+              <AccountsTotalNumber>1,250,805 원</AccountsTotalNumber>
+              <AccountsTotalDetail></AccountsTotalDetail>
+            </AccountsTotal>
+          </AccoutsHeader>
+          <AccountsList>
+            <Account></Account>
+          </AccountsList>
+        </HomeAccounts>
         <HomeMargin></HomeMargin>
       </HomeContainer>
     </HomeScroll>

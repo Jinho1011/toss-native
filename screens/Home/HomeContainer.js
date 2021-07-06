@@ -1,4 +1,5 @@
 import React from 'react';
+import {StyleSheet} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {BlurView} from '@react-native-community/blur';
 import styled from 'styled-components/native';
@@ -43,6 +44,13 @@ export default () => {
           headerTransparent: true,
           headerBackground: () => (
             <BlurView
+              style={{
+                position: 'absolute',
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0,
+              }}
               blurType="light"
               blurAmount={100}
               reducedTransparencyFallbackColor="white"
