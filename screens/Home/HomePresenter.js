@@ -72,17 +72,36 @@ const HomeMargin = styled.View`
   height: 1000px;
 `;
 
-const HomeAccounts = styled.View``;
+const HomeAccounts = styled.View`
+  padding: 20px;
+`;
 
-const AccoutsHeader = styled.View``;
+const AccoutsHeader = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+`;
 
-const AccountsTitle = styled.Text``;
+const AccountsTitle = styled.Text`
+  font-weight: bold;
+  font-size: 24px;
+`;
 
-const AccountsTotal = styled.View``;
+const AccountsTotal = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
 
-const AccountsTotalNumber = styled.Text``;
+const AccountsTotalNumber = styled.Text`
+  color: #6f757d;
+  font-size: 24px;
+`;
 
-const AccountsTotalDetail = styled.Text``;
+const AccountsTotalDetail = styled.Text`
+  color: #6f757d;
+  font-size: 24px;
+`;
 
 const AccountsList = styled.View``;
 
@@ -112,7 +131,7 @@ const Home = () => {
             <AccountsTitle>계좌</AccountsTitle>
             <AccountsTotal>
               <AccountsTotalNumber>1,250,805 원</AccountsTotalNumber>
-              <AccountsTotalDetail></AccountsTotalDetail>
+              <AccountsTotalDetail>{'>'}</AccountsTotalDetail>
             </AccountsTotal>
           </AccoutsHeader>
           <AccountsList>
