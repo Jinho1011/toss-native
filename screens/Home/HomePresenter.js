@@ -82,7 +82,7 @@ const AccountsTotal = styled.View``;
 
 const AccountsTotalNumber = styled.Text``;
 
-const AccountsTotalDetail = styled.Test``;
+const AccountsTotalDetail = styled.Text``;
 
 const AccountsList = styled.View``;
 

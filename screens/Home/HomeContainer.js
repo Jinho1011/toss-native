@@ -1,5 +1,4 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {BlurView} from '@react-native-community/blur';
 import styled from 'styled-components/native';
